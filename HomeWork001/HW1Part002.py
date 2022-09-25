@@ -7,7 +7,7 @@ z = [True, False]
 for i in x:
     for j in y:
         for k in z:
-            result = (x or y or z) == (not x or not y or not z)
+            result = not(x or y or z) == (not x or not y or not z)
             print(f'¬({x[i]} ⋁ {y[j]} ⋁ {z[k]}) = ¬{x[i]} ⋀ ¬{y[j]} ⋀ ¬{z[k]} \t {result}')
             if result == False:
                 break
