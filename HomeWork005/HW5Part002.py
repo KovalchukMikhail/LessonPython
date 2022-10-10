@@ -36,7 +36,7 @@ def Game(rules, count, name_player):
     if name_player == 'Компьютер':
         if count < 29:
             number = count
-        elif count - count % 29 != 0:
+        elif count % 29 != 0:
             number = count % 29
         else:
             number = 1
