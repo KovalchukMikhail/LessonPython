@@ -87,12 +87,15 @@ with open(f'{name_first}') as file:
 with open(f'{name_second}') as file:
     text_second = file.read()
 
-list_first = String_to_list(text_first)
+# list_first = String_to_list(text_first)
 
-list_second = String_to_list(text_second)
+# list_second = String_to_list(text_second)
 
-dict_first = List_to_dict(list_first)
-dict_second = List_to_dict(list_second)
+# dict_first = List_to_dict(list_first)
+# dict_second = List_to_dict(list_second)
+
+dict_first = List_to_dict(String_to_list(text_first))
+dict_second = List_to_dict(String_to_list(text_second))
 
 
 result_dict = {}

@@ -18,11 +18,14 @@ min_number = int(input())
 print ('Введите максимальное возможное значение числа в списке: ')
 max_number = int(input())
 new_list = CreateList(size_list, min_number, max_number)
-result_list = []
-
+result_list = [(abs(i-int(i))) for i in new_list if i - int(i) != 0]
+print(result_list)
+list_b = []
 for i in new_list:
     if i - int(i) != 0:
-        result_list.append(abs(i - int(i)))
+        list_b.append(abs(i - int(i)))
+print(list_b)
+
 min_number = min(result_list)
 max_number = max(result_list)
 
