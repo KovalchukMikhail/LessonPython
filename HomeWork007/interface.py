@@ -41,8 +41,8 @@ def Get_data( temp_equation = '', text_result = 'result'):
     button_bracket_left.place(x=135, y=180)
     button_bracket_right = tk.Button(text=')', width=2, height=1, font = 'Arial 14', command=partial(entry.insert, 100, ')'))
     button_bracket_right.place(x=170, y=180)
-    button_equal = tk.Button(text='=', width=6, height=1, font = 'Arial 19', command=partial(Get_button))
-    button_equal.place(x=102, y=220)
+    button_equal = tk.Button(text='=', width=4, height=1, font = 'Arial 19', command=partial(Get_button))
+    button_equal.place(x=132, y=220)
     button_one = tk.Button(text='1', width=3, height=1, font = 'Arial 14', command=partial(entry.insert, 100, '1'))
     button_one.place(x=2, y=100)
     button_two = tk.Button(text='2', width=3, height=1, font = 'Arial 14', command=partial(entry.insert, 100, '2'))
@@ -61,8 +61,10 @@ def Get_data( temp_equation = '', text_result = 'result'):
     button_eight.place(x=45, y=180)
     button_nine = tk.Button(text='9', width=3, height=1, font = 'Arial 14', command=partial(entry.insert, 100, '9'))
     button_nine.place(x=90, y=180)
-    button_zero = tk.Button(text='0', width=6, height=1, font = 'Arial 19', command=partial(entry.insert, 100, '0'))
+    button_zero = tk.Button(text='0', width=4, height=1, font = 'Arial 19', command=partial(entry.insert, 100, '0'))
     button_zero.place(x=2, y=220)
+    button_point = tk.Button(text='.', width=3, height=1, font = 'Arial 19', command=partial(entry.insert, 100, '.'))
+    button_point.place(x=75, y=220)
 
     def On_closing():
         global close
