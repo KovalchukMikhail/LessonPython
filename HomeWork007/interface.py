@@ -1,17 +1,23 @@
 
 from functools import partial
+from statistics import geometric_mean
 import tkinter as tk
 
 equation = ''
 result = ''
 close = 0
+geometry_current = '205x275+600+300'
 
 def Get_data( temp_equation = '', text_result = 'result'):
     global equation
     equation = temp_equation
     window = tk.Tk()
-    window.geometry('205x275+600+300')
+    window.geometry(geometry_current)
     window.title(f'Калькулятор')
+    def Info(event):
+        global geometry_current
+        geometry_current = window.geometry()
+    window.bind('<Configure>', Info)
     text_lable = 'Введите выражение с клавиатуры или\nиспользуйте кнопки под строкой ввода'
     lable_start = tk.Label(text = text_lable, font = 'Arial 8')
     lable_start.place(x=0, y=2)
