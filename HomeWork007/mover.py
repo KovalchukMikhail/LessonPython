@@ -29,10 +29,7 @@ def Calc(text):
     list = text.replace('+', ' + ').replace('-', ' - ').replace('x', ' x ').replace('*', ' x ').replace('/', ' / ').replace('(', ' ( ').replace(')', ' ) ').split()
 
     if list[0] == '-':
-        if list[1] == '(':
-            list[2] = float(list[2])*-1
-        else:
-            list[1] = float(list[1])*-1
+        list[1] = float(list[1])*-1
         list.pop(0)
     
     list_temp = []
