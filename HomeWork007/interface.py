@@ -8,6 +8,7 @@ result = ''
 close = 0
 geometry_current = '205x275+600+300'
 
+
 def Get_data( temp_equation = '', text_result = 'result'):
     global equation
     equation = temp_equation
@@ -26,11 +27,13 @@ def Get_data( temp_equation = '', text_result = 'result'):
     def Get(event):
         global equation
         equation = entry.get()
-        window.destroy()
+        if equation != temp_equation and equation[-1].isdigit():
+            window.destroy()
     def Get_button():
         global equation
         equation = entry.get()
-        window.destroy()
+        if equation != temp_equation and equation[-1].isdigit():
+            window.destroy()
     entry = tk.Entry(font = "Arial 12")
     entry.insert(0, equation)
     entry.place(x=2, y=40, width=200, )

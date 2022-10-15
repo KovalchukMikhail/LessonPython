@@ -33,6 +33,11 @@ def Plus_or_minus(list):
 
 def Calc(text):
     list = text.replace('+', ' + ').replace('-', ' - ').replace('x', ' x ').replace('*', ' x ').replace('/', ' / ').replace('(', ' ( ').replace(')', ' ) ').split()
+    
+    # if list[len(list)-1] == '+' or list[len(list)-1] == '-' or list[len(list)-1] == '*' or list[len(list)-1] == '/' or list[len(list)-1] == 'x':
+    #     list = []
+    #     list.append(0)
+    #     return list
 
     if list[0] == '-':
         list[1] = float(list[1])*-1
