@@ -24,6 +24,4 @@ from random import randint
 #     print(f'В списке отсутсвую элементы с нечетными индексами')
 
 print(f'Сумма чисел стоящих на нечетных позициях списка равна {sum((list_new :=[randint(0, 10) for _ in range(int(input("Введите количество чисел в списке: ")))])[1::2])}')
-
-# print(f'Сумма чисел стоящих на нечетных позициях списка равна {sum(list(map(lambda x: x[1] if x[0] % 2 else 0, list(enumerate(list_new :=[randint(0, 10) for _ in range(int(input("Введите количество чисел в списке: ")))])))))}')
 print(f'Список: {list_new}')
