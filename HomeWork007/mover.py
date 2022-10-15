@@ -5,6 +5,9 @@ def Mult_or_div(list):
     num = 0
     while 'x' in list or '/' in list:
         if list[i] == 'x' or list[i] == '/':
+            if list[i+1] == '-':
+                list[i+1] = str(float(list[i+2])*(-1))
+                list.pop(i+2)
             num = (float(list[i-1])/float(list[i+1])) if list[i] == '/' else (float(list[i-1])*float(list[i+1]))
             list[i-1] = num
             list.pop(i)
@@ -17,6 +20,9 @@ def Plus_or_minus(list):
     i = 0
     while '-' in list or '+' in list:
         if list[i] == '-' or list[i] == '+':
+            if list[i+1] == '-':
+                list[i+1] = str(float(list[i+2])*(-1))
+                list.pop(i+2)
             num = (float(list[i-1])-float(list[i+1])) if list[i] == '-' else (float(list[i-1])+float(list[i+1]))
             list[i-1] = num
             list.pop(i)
@@ -44,7 +50,7 @@ def Calc(text):
                 end = i
                 break
         for i in range(start + 1, end):
-            list_temp.append(list[i])
+            list_temp.append(str(list[i]))
         list_temp = Calc(''.join(list_temp))
         list[start] = list_temp[0]
         for _ in range(1, end - start + 1):
